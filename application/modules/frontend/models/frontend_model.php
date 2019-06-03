@@ -287,6 +287,16 @@ function MyAppSettings($tableName, $where_status, $orderByFieldName){
 	
 	}
 	
+	function get_Cat_By_Id($tableName, $where_status, $id, $value){
+	$query = $this->db->query("Select * from $tableName where $where_status='Y' and  $id='".$value."' ");
+    $totalRowsUnique = $query->num_rows();
+   if($totalRowsUnique > 0)
+        {
+      return $query->row();   
+        }  
+	
+	}
+	
 function get_CMS_By_Id($tableName, $where_status, $id, $value){
 	$query = $this->db->query("Select * from $tableName where $where_status='Y' and  $id='".$value."' ");
     $totalRowsUnique = $query->num_rows();

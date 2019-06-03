@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Front_Page extends MY_Controller {
+class Contact_Us extends MY_Controller {
 	
 	public function __construct()
 	{
@@ -19,10 +19,10 @@ class Front_Page extends MY_Controller {
 	public function index() 
 	{
 		$data=array();
-		$data['getCMS']=$this->frontend_model->get_CMS_By_Id('myapp_cms','Status','cmsid',1);   
+		$data['getCMS']=$this->frontend_model->get_CMS_By_Id('myapp_cms','Status','cmsid',3);   
 		$data['MyAppSettings']=$this->frontend_model->MyAppSettings('myapp_application_settings','Status','setting_id');   
-		$data['page']='front_page';
-		$this->load->view('main',$data);
+		$data['page']='contact_us';
+		$this->load->view('main',$data); 
 		
 	}  
 }

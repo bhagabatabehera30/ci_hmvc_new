@@ -10,14 +10,7 @@ class administrator extends CI_Controller {
         $this->load->helper(array('form', 'url','file','custom_helper'));
         $this->load->database();
         $this->load->model('admin_model');
-        define('Adminpath', base_url().'administrator/');
-		//define('Adminpath', base_url().'index.php/administrator/');
-        define('ASSETS2', base_url().'assets/admin/');
-		define('ASSETS2_ADMIN', base_url().'assets/admin/');
-		define('CDN_PATH', base_url().'cdn/');
-        define('administrator', base_url().'administrator/');
-		//define('administrator', base_url().'index.php/administrator/');
-        define('PATH', base_url());
+       
 		//define('PATH', base_url().'index.php');
 		// --------load extra css and js  for specific pages/methods-------------------
       if((($this->router->method) == "adminUserList")  )

@@ -9,7 +9,7 @@
      <meta name="description" itemprop="description" content="<?=$getCMS->MetaDescription; ?>">
      <meta name="keywords" itemprop="keywords" content="<?=$getCMS->SEOKeyword; ?>"> 
      <meta name="author" content="<?=$MyAppSettings->metaAuthor; ?>">  
-     <?php $fabImage=$MyAppSettings->fab_icon; if($fabImage!='' && file_exists("./cdn/logoImage/$fabImage")){ ?> <link rel="shortcut icon" href="<?=CDN_PATH?>logoImage/<?php echo $fabImage;?>"><?php } ?><!-- App title --><?php $URI=ltrim($_SERVER['REQUEST_URI'],'/'.LOCAL_FOLDER); if($URI=='dex' || $URI=='home'){ ?>
+     <?php $fabImage=$MyAppSettings->fab_icon; if($fabImage!='' && file_exists("./cdn/logoImage/$fabImage")){ ?> <link rel="shortcut icon" href="<?=CDN_PATH?>logoImage/<?php echo $fabImage;?>"><?php } ?><!-- App title --><?php  $URI=ltrim($_SERVER['REQUEST_URI'],'/'.LOCAL_FOLDER); if($URI=='dex' || $URI=='ome'){ ?>
      <script>window.location.href='<?=$MyAppSettings->domain?>';</script>  
 	 <?php }else{ ?><link rel="canonical" href="<?=$MyAppSettings->domain.$URI;?>" /> <?php }?>   
      
